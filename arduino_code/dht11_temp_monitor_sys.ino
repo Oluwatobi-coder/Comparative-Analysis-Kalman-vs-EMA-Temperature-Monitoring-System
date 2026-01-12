@@ -27,7 +27,7 @@ const float TEMP_THRESHOLD = 40.0;
 
 // 2. EMA Filter Variables
 float Temp_EMA = 0;       // The filtered result
-float alpha = 0.05;         // Smoothing Factor (0.1 = Very smooth/slow, 0.9 = Fast/noisy)
+float alpha = 0.05;         // Smoothing factor
 
 // setting the kalman filter variables
 float R = 2.0;   // measurement noise covariance 
@@ -98,16 +98,10 @@ void loop() {
       return;
     }
 
-    // if (!isnan(Temp_Raw)) {
-    //   Temp_K = Temp_Raw;
-    //   Temp_EMA = Temp_Raw;       
-    // }
-
-    // --- STEP 2: ALGORITHM A - EXPONENTIAL MOVING AVERAGE (EMA) ---
-    // Logic: New Average = (Weight * New Input) + ((1-Weight) * Old Average)
+    // implementing the exponential moving average algorithm
     Temp_EMA = (alpha * Temp_Raw) + ((1.0 - alpha) * Temp_EMA);
 
-    // carrying out signal processing using 1D kalman filter
+    // carrying out signal processing using kalman filter
     float Temp_K_pred = Temp_K;      
     float P_pred = P + Q;    
 
