@@ -30,7 +30,7 @@ low-cost DHT11 sensor.
   
   $$\hat{x}_k = \hat{x}^-_k + K_k ( z_k - \hat{x}^-_k )$$
 
-  $P_k = (1 - K_k)P_{k}^{-}$
+  $$P_k = (1 - K_k)P_{k}^{-}$$
   
   Where,
   
