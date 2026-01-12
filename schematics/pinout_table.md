@@ -16,4 +16,4 @@
 | LCD (A)   | (+)       | 5V               |
 | LCD (K)   | GND       | GND              |
 
-**Note:** V0 should be connected to the middle pin of a 10 to 50k Ohm potentiometer and the other two pins to 5V and GND. Use `circuit_diagram.png` in `schematics` as a guide.
+**Note:** V0 should be connected to the middle pin of a 10 to 50k Ohm potentiometer and the other two pins to 5V and GND. Use `circuit_diagram.png` in the `schematics` folder as a guide.
