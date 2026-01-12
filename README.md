@@ -53,7 +53,7 @@ low-cost DHT11 sensor.
 
 * **Sensor:** DHT11 Temperature & Humidity Sensor
 
-* **Display:** 16x2 LCD Module
+* **Display:** 16x2 LCD Module (A 50k Ohm Potentiometer was used to adjust screen contrast)
 
 * **Alarm System:** 5V Active Buzzer and LED Indicator
 
@@ -66,6 +66,22 @@ The circuit diagram was developed using [Tinkercad]([https://plant-disease-predi
 <p align="center">
   <img src="./schematics/circuit_diagram.png" width="80%" /> 
 </p>
+
+
+## 📁 Repository Structure
+<pre>
+├── arduino_code
+│   ├── dht11_temp_monitor_sys.ino
+├── results
+│   ├── cold_source_test.png
+│   ├── heat_source_test.png
+│   ├── steady_state_test.png  
+├── schematics
+│   ├── circuit_diagram.png
+│   ├── pinout_table.md  
+├── LICENSE
+└── README.md
+</pre>
 
 
 ## 🌐 Running the System
