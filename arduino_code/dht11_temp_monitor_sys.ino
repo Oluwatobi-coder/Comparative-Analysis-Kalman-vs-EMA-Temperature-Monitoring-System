@@ -9,8 +9,9 @@
  * when filtered temperature value crosses the set threshold (T = 40 degC) 
  */
 
+// importing DHT and LCD libraries
 #include "DHT.h"
-#include <LiquidCrystal.h> // Standard Library
+#include <LiquidCrystal.h>
 
 // defining the hardware
 #define DHTPIN 2       
@@ -121,12 +122,12 @@ void loop() {
     // displaying system status based on temperature threshold value on LCD 2nd line
     lcd.setCursor(0,1);
     if (Temp_K >= TEMP_THRESHOLD) {
-      // specifying actions and display text during critical state
+      // specifying actions and displaying text during critical state
       digitalWrite(LED_PIN, HIGH);
       digitalWrite(BUZZER_PIN, HIGH);
       lcd.print("STATUS: CRITICAL");
     } else {
-      // specifying actions and display text during normal state
+      // specifying actions and displaying text during normal state
       digitalWrite(LED_PIN, LOW);
       digitalWrite(BUZZER_PIN, LOW);
       lcd.print("STATUS: NORMAL");
