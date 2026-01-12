@@ -24,11 +24,15 @@ low-cost DHT11 sensor.
   
   **Step B: Correction**
   
-  Corrects the predicted state by incorporating the new sensor measurement ($z_k$), weighted by the calculated Kalman Gain ($K$).
+  Corrects the predicted state by incorporating the new sensor measurement ($z_k$) weighted by the calculated Kalman Gain ($K$), and updating the error covariance ($P_k$).
   
   $$K_k = P^-_k ( P^-_k + R )^{-1}$$
   
   $$\hat{x}_k = \hat{x}^-_k + K_k ( z_k - \hat{x}^-_k )$$
+
+  $P_k = (1 - K_k)P_{k}^{-}$
+  
+  Where,
   
   **$Q$ (Process Noise):** Represents system dynamics Uncertainty.
   
